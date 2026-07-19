@@ -131,73 +131,103 @@
 ```bash
 git clone https://github.com/Tichavona/AI4I.git
 cd AI4I
+```
+
 2. Backend (RAG Backend)
 Navigate to the RAG backend:
 
-bash
+```bash
 cd rag-backend/RAG-main
 Create and activate a virtual environment (Python 3.10.13):
+```
 
 bash
 # Windows
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 python3.10 -m venv venv
 source venv/bin/activate
+```
+
 Install dependencies:
 
 bash
+```
 pip install -r requirements.txt
+```
+
 Copy environment template:
 
 bash
 # Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
 Configure .env (see Environment Variables).
+```
 
 Start the RAG server:
 
 bash
+```
 python app.py
 Or using Uvicorn (recommended for development):
+```
 
 bash
+```
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 The RAG server will run at http://localhost:8000.
+```
 
 3. Streamlit Interface
 Navigate to the Streamlit directory:
 
 bash
+```
 cd ../../streamlit-interface
 Create and activate a virtual environment (Python 3.10.13):
+```
 
 bash
 # Windows
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
 # Linux/Mac
+```
 python3.10 -m venv venv
 source venv/bin/activate
+```
 Install dependencies:
 
 bash
+```
 pip install -r requirements.txt
 Copy environment template:
+```
 
 bash
 # Windows
+```
 copy .env.example .env
+```
 
 # Linux/Mac
-cp .env.example .env
+```cp .env.example .env
 Configure .env (see Environment Variables).
+```
 
 Run the Streamlit dashboard:
 
