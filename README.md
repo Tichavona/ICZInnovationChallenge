@@ -56,7 +56,7 @@
 
 ## Overview
 
-**Muyamuri/Umsizi** is an AI‑powered digital platform that revolutionises citizen‑government interaction across four critical domains: emergency response, municipal services, agricultural support, and official government communication. The platform leverages WhatsApp's ubiquitous presence—with over 12.83 million active internet subscriptions in Zimbabwe—to create a seamless, intelligent interface that receives citizen reports while proactively communicating official government positions with verifiable citations.
+**Muyamuri/Umsizi** is an AI‑powered digital platform that revolutionises citizen‑government interaction across four critical domains: emergency response, municipal services, agricultural support, and official government communication. The platform leverages WhatsApp's ubiquitous presence, with over 12.83 million active internet subscriptions in Zimbabwe—to create a seamless, intelligent interface that receives citizen reports while proactively communicating official government positions with verifiable citations.
 
 **Project Zvipo** (meaning "gifts" in Shona) extends the vision to build Zimbabwe's sovereign data foundation through public data aggregation, indigenous knowledge preservation, and the creation of Shona and Ndebele language corpora. The project addresses the critical data sovereignty gap by establishing a Sovereign Data Curation Pipeline that systematically scrapes and structures public government data while creating a first‑of‑its‑kind indigenous tree knowledge dataset.
 
@@ -70,24 +70,7 @@
 
 ---
 
-## System Architecture
-┌───────────────┐    ┌────────────────────┐    ┌────────────────────┐
-│ WhatsApp          │──▶│ Chatbot Backend          │──▶│ RAG Backend              │
-│ (Users)           │    │ (Node.js/Express)        │    │ (Python/FastAPI)         │
-└───────────────┘    └────────────────────┘    └────────────────────┘
-                                      │                                │
-                                      ▼                               ▼
-                            ┌──────────────┐           ┌──────────────────┐
-                            │ MongoDB          │           │ Vector DB              │
-                            │ (Reports)        │           │ (Pinecone/Qdrant)      │
-                            └──────────────┘           └──────────────────┘
-                                    │                                 │
-                                    ▼                                ▼
-			    ┌──────────────┐            ┌──────────────┐                 
-                            │ React Admin      │            │ Streamlit        │ ◀─── Government Officials
- System Administrators───▶ │ UI               │            │ Dashboard        │
-                            └──────────────┘            └──────────────┘
-                                                                      
+<img width="1672" height="941" alt="System Architecture" src="https://github.com/user-attachments/assets/a28c757a-71c4-4939-9feb-53178822c418" />
                                                                       
                                                               
 ---
