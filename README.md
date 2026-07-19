@@ -142,7 +142,7 @@ Create and activate a virtual environment (Python 3.10.13):
 ```
 
 bash
-# Windows
+### Windows
 ```
 python -m venv venv
 venv\Scripts\activate
@@ -164,7 +164,7 @@ pip install -r requirements.txt
 Copy environment template:
 
 bash
-# Windows
+### Windows
 ```
 copy .env.example .env
 ```
@@ -199,13 +199,13 @@ Create and activate a virtual environment (Python 3.10.13):
 ```
 
 bash
-# Windows
+### Windows
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
 
-# Linux/Mac
+### Linux/Mac
 ```
 python3.10 -m venv venv
 source venv/bin/activate
@@ -219,12 +219,12 @@ Copy environment template:
 ```
 
 bash
-# Windows
+### Windows
 ```
 copy .env.example .env
 ```
 
-# Linux/Mac
+### Linux/Mac
 ```cp .env.example .env
 Configure .env (see Environment Variables).
 ```
@@ -232,65 +232,91 @@ Configure .env (see Environment Variables).
 Run the Streamlit dashboard:
 
 bash
+```
 streamlit run app.py
+```
 The dashboard will be available at http://localhost:8501.
 
 4. Chatbot Frontend (React)
 Navigate to the React frontend:
 
 bash
+```
 cd ../chatbot/chatbot-frontend
+```
 Install dependencies (Node.js v24.18.0):
 
 bash
+```
 npm install
+```
 Copy environment template:
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
+```
 Configure .env (see Environment Variables).
 
 Start the development server:
 
 bash
+```
 npm start
+```
 The React app will be available at http://localhost:3000.
 
 Build for production (optional):
 
 bash
+```
 npm run build
+```
 5. Chatbot Backend (Node.js)
 Navigate to the chatbot backend:
 
 bash
+```
 cd ../yamurai-chatbot
+```
 Install dependencies (Node.js v24.18.0):
 
 bash
+```
 npm install
+```
 Copy environment template:
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
+```
 Configure .env (see Environment Variables).
 
 Start the server:
 
 bash
+```
 npm start
+```
 For development with auto-reload:
 
 bash
+```
 npm run dev
+```
 The chatbot backend will run at http://localhost:5000.
 
 Environment Variables
@@ -298,108 +324,156 @@ Each component expects a .env file in its respective root directory. Below are a
 
 RAG Backend (.env)
 env
-# MongoDB Configuration
+### MongoDB Configuration
+```
 MONGO_URI=mongodb://localhost:27017/rag_db
 MONGO_DB_NAME=rag_db
+```
 
-# Vector Database
+### Vector Database
+```
 VECTOR_DB_TYPE=pinecone  # or qdrant
 VECTOR_DB_API_KEY=your_pinecone_or_qdrant_key
 VECTOR_DB_ENVIRONMENT=your_environment
 VECTOR_DB_INDEX_NAME=your_index_name
+```
 
-# LLM Configuration
+### LLM Configuration
+```
 LLM_PROVIDER=openai  # or azure, local
 LLM_API_KEY=your_openai_or_azure_key
 LLM_MODEL=gpt-4
 LLM_TEMPERATURE=0.7
+```
 
-# Document Store
+### Document Store
+```
 DOCUMENT_STORE_PATH=./data/documents
 EMBEDDINGS_CACHE_PATH=./data/embeddings
+```
 
-# Server Configuration
+### Server Configuration
+```
 HOST=0.0.0.0
 PORT=8000
 DEBUG=True
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=INFO
 LOG_FILE=./logs/rag.log
+```
 
-# Rate Limiting
+### Rate Limiting
+```
 RATE_LIMIT_PER_MINUTE=60
 Streamlit Interface (.env)
+```
 env
-# API URLs
+### API URLs
+```
 RAG_API_URL=http://localhost:8000
 CHATBOT_API_URL=http://localhost:5000
+```
 
-# MongoDB
+### MongoDB
+```
 MONGO_URI=mongodb://localhost:27017/streamlit_db
 MONGO_DB_NAME=streamlit_db
+```
 
-# Authentication (optional)
+### Authentication (optional)
+```
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD_HASH=your_hashed_password
+```
 
-# Session
+### Session
+```
 SESSION_TIMEOUT=3600  # seconds
+```
 
-# Analytics
+### Analytics
+```
 ENABLE_ANALYTICS=True
 ANALYTICS_REFRESH_INTERVAL=60  # seconds
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=INFO
 Chatbot Backend (.env)
+```
 env
-# Server Configuration
+### Server Configuration
+```
 PORT=5000
 NODE_ENV=development
+```
 
-# WhatsApp Business API
+### WhatsApp Business API
+```
 WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
 WHATSAPP_ACCESS_TOKEN=your_whatsapp_access_token
 WHATSAPP_VERIFY_TOKEN=your_verify_token
 WHATSAPP_API_VERSION=v18.0
+```
 
-# MongoDB
+### MongoDB
+```
 MONGO_URI=mongodb://localhost:27017/chatbot_db
 MONGO_DB_NAME=chatbot_db
+```
 
-# RAG Integration
+### RAG Integration
+```
 RAG_API_URL=http://localhost:8000
+```
 
-# Security
+### Security
+```
 JWT_SECRET=your_jwt_secret_key
 SESSION_SECRET=your_session_secret
+```
 
-# Rate Limiting
+### Rate Limiting
+```
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX_REQUESTS=100
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=info
 LOG_FILE=./logs/chatbot.log
+```
 
-# Webhook
+### Webhook
+```
 WEBHOOK_BASE_URL=https://your-domain.com
 WEBHOOK_PATH=/webhook
 Chatbot Frontend (.env)
+```
 env
-# API URLs
+### API URLs
+```
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_RAG_API_URL=http://localhost:8000
+```
 
-# Authentication
+### Authentication
+```
 REACT_APP_AUTH_ENABLED=true
+```
 
-# Feature Flags
+### Feature Flags
+```
 REACT_APP_ENABLE_ANALYTICS=true
 REACT_APP_ENABLE_NOTIFICATIONS=true
+```
 
-# Build
+### Build
 REACT_APP_BUILD_VERSION=1.0.0
 Running the System
 Development Mode
@@ -485,20 +559,21 @@ volumes:
 Testing
 Python Tests (RAG & Streamlit)
 bash
-# RAG backend
+
+### RAG backend
 cd rag-backend/RAG-main
 pytest tests/ --cov=app --cov-report=html
 
-# Streamlit
+### Streamlit
 cd streamlit-interface
 pytest tests/
 Node.js Tests (Chatbot)
 bash
-# Backend
+### Backend
 cd chatbot/yamurai-chatbot
 npm test -- --coverage
 
-# Frontend
+### Frontend
 cd chatbot/chatbot-frontend
 npm test
 End-to-End Testing (Cypress)
