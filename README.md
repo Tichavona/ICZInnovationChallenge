@@ -56,7 +56,7 @@
 
 ## Overview
 
-**Muyamuri/Umsizi** is an AI‑powered digital platform that revolutionises citizen‑government interaction across four critical domains: emergency response, municipal services, agricultural support, and official government communication. The platform leverages WhatsApp's ubiquitous presence—with over 12.83 million active internet subscriptions in Zimbabwe—to create a seamless, intelligent interface that receives citizen reports while proactively communicating official government positions with verifiable citations.
+**Muyamuri/Umsizi** is an AI‑powered digital platform that revolutionises citizen‑government interaction across four critical domains: emergency response, municipal services, agricultural support, and official government communication. The platform leverages WhatsApp's ubiquitous presence, with over 12.83 million active internet subscriptions in Zimbabwe—to create a seamless, intelligent interface that receives citizen reports while proactively communicating official government positions with verifiable citations.
 
 **Project Zvipo** (meaning "gifts" in Shona) extends the vision to build Zimbabwe's sovereign data foundation through public data aggregation, indigenous knowledge preservation, and the creation of Shona and Ndebele language corpora. The project addresses the critical data sovereignty gap by establishing a Sovereign Data Curation Pipeline that systematically scrapes and structures public government data while creating a first‑of‑its‑kind indigenous tree knowledge dataset.
 
@@ -70,24 +70,7 @@
 
 ---
 
-## System Architecture
-┌───────────────┐    ┌────────────────────┐    ┌────────────────────┐
-│ WhatsApp          │──▶│ Chatbot Backend          │──▶│ RAG Backend              │
-│ (Users)           │    │ (Node.js/Express)        │    │ (Python/FastAPI)         │
-└───────────────┘    └────────────────────┘    └────────────────────┘
-                                      │                                │
-                                      ▼                               ▼
-                            ┌──────────────┐           ┌──────────────────┐
-                            │ MongoDB          │           │ Vector DB              │
-                            │ (Reports)        │           │ (Pinecone/Qdrant)      │
-                            └──────────────┘           └──────────────────┘
-                                    │                                 │
-                                    ▼                                ▼
-			    ┌──────────────┐            ┌──────────────┐                 
-                            │ React Admin      │            │ Streamlit        │ ◀─── Government Officials
- System Administrators───▶ │ UI               │            │ Dashboard        │
-                            └──────────────┘            └──────────────┘
-                                                                      
+<img width="1672" height="941" alt="System Architecture" src="https://github.com/user-attachments/assets/a28c757a-71c4-4939-9feb-53178822c418" />
                                                                       
                                                               
 ---
@@ -109,65 +92,7 @@
 ---
 
 ## Folder Structure
-AI4I/
-├── .gitignore # Root gitignore
-├── README.md # This file
-│
-├── chatbot/ # Node.js components
-│ ├── chatbot-frontend/ # React frontend (Admin UI)
-│ │ ├── public/ # Static assets
-│ │ ├── src/ # React source code
-│ │ │ ├── components/ # Reusable UI components
-│ │ │ ├── pages/ # Page components
-│ │ │ ├── services/ # API services
-│ │ │ ├── styles/ # CSS/styling
-│ │ │ ├── App.js # Main React app
-│ │ │ └── index.js # Entry point
-│ │ ├── package.json # Dependencies
-│ │ ├── .env.example # Environment template
-│ │ └── README.md # Frontend-specific docs
-│ │
-│ └── yamurai-chatbot/ # Node.js backend (WhatsApp API)
-│ ├── src/
-│ │ ├── routes/ # API routes
-│ │ ├── controllers/ # Business logic
-│ │ ├── models/ # Database models
-│ │ ├── middleware/ # Auth, validation
-│ │ ├── services/ # External service integrations
-│ │ └── app.js # Main Express app
-│ ├── package.json # Dependencies
-│ ├── .env.example # Environment template
-│ └── README.md # Backend-specific docs
-│
-├── rag-backend/ # Python RAG service
-│ └── RAG-main/ # Core RAG implementation
-│ ├── agents/ # AI agent implementations
-│ ├── app.py # Main FastAPI application
-│ ├── fbScrapper.py # Facebook scraper
-│ ├── flaskApp.py # Flask compatibility layer
-│ ├── pdfChunker.py # PDF chunking utilities
-│ ├── twitter.py # Twitter scraper
-│ ├── requirements.txt # Python dependencies
-│ ├── pipFreeze.txt # Frozen dependencies
-│ ├── setup.py # Package setup
-│ ├── .env.example # Environment template
-│ └── README.md # RAG-specific docs
-│
-└── streamlit-interface/ # Streamlit dashboard
-├── app.py # Main Streamlit app
-├── pages/ # Multi-page app
-│ ├── emergency.py # Emergency reports page
-│ ├── municipal.py # Municipal reports page
-│ ├── agricultural.py # Agricultural reports page
-│ ├── analytics.py # Analytics & insights
-│ └── settings.py # Admin settings
-├── components/ # Reusable Streamlit components
-├── utils/ # Utility functions
-├── requirements.txt # Python dependencies
-├── .env.example # Environment template
-└── README.md # Streamlit-specific docs
-
-text
+<img width="941" height="1672" alt="Folder Structure" src="https://github.com/user-attachments/assets/58a86a0e-0dbf-4639-9679-7c7e6ef2ec61" />
 
 ---
 
@@ -206,136 +131,192 @@ text
 ```bash
 git clone https://github.com/Tichavona/AI4I.git
 cd AI4I
+```
+
 2. Backend (RAG Backend)
 Navigate to the RAG backend:
 
-bash
+```bash
 cd rag-backend/RAG-main
 Create and activate a virtual environment (Python 3.10.13):
+```
 
 bash
-# Windows
+### Windows
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 python3.10 -m venv venv
 source venv/bin/activate
+```
+
 Install dependencies:
 
 bash
+```
 pip install -r requirements.txt
+```
+
 Copy environment template:
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
 Configure .env (see Environment Variables).
+```
 
 Start the RAG server:
 
 bash
+```
 python app.py
 Or using Uvicorn (recommended for development):
+```
 
 bash
+```
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 The RAG server will run at http://localhost:8000.
+```
 
 3. Streamlit Interface
 Navigate to the Streamlit directory:
 
 bash
+```
 cd ../../streamlit-interface
 Create and activate a virtual environment (Python 3.10.13):
+```
 
 bash
-# Windows
+### Windows
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 python3.10 -m venv venv
 source venv/bin/activate
+```
 Install dependencies:
 
 bash
+```
 pip install -r requirements.txt
 Copy environment template:
+```
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
-cp .env.example .env
+### Linux/Mac
+```cp .env.example .env
 Configure .env (see Environment Variables).
+```
 
 Run the Streamlit dashboard:
 
 bash
+```
 streamlit run app.py
+```
 The dashboard will be available at http://localhost:8501.
 
 4. Chatbot Frontend (React)
 Navigate to the React frontend:
 
 bash
+```
 cd ../chatbot/chatbot-frontend
+```
 Install dependencies (Node.js v24.18.0):
 
 bash
+```
 npm install
+```
 Copy environment template:
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
+```
 Configure .env (see Environment Variables).
 
 Start the development server:
 
 bash
+```
 npm start
+```
 The React app will be available at http://localhost:3000.
 
 Build for production (optional):
 
 bash
+```
 npm run build
+```
 5. Chatbot Backend (Node.js)
 Navigate to the chatbot backend:
 
 bash
+```
 cd ../yamurai-chatbot
+```
 Install dependencies (Node.js v24.18.0):
 
 bash
+```
 npm install
+```
 Copy environment template:
 
 bash
-# Windows
+### Windows
+```
 copy .env.example .env
+```
 
-# Linux/Mac
+### Linux/Mac
+```
 cp .env.example .env
+```
 Configure .env (see Environment Variables).
 
 Start the server:
 
 bash
+```
 npm start
+```
 For development with auto-reload:
 
 bash
+```
 npm run dev
+```
 The chatbot backend will run at http://localhost:5000.
 
 Environment Variables
@@ -343,108 +324,156 @@ Each component expects a .env file in its respective root directory. Below are a
 
 RAG Backend (.env)
 env
-# MongoDB Configuration
+### MongoDB Configuration
+```
 MONGO_URI=mongodb://localhost:27017/rag_db
 MONGO_DB_NAME=rag_db
+```
 
-# Vector Database
+### Vector Database
+```
 VECTOR_DB_TYPE=pinecone  # or qdrant
 VECTOR_DB_API_KEY=your_pinecone_or_qdrant_key
 VECTOR_DB_ENVIRONMENT=your_environment
 VECTOR_DB_INDEX_NAME=your_index_name
+```
 
-# LLM Configuration
+### LLM Configuration
+```
 LLM_PROVIDER=openai  # or azure, local
 LLM_API_KEY=your_openai_or_azure_key
 LLM_MODEL=gpt-4
 LLM_TEMPERATURE=0.7
+```
 
-# Document Store
+### Document Store
+```
 DOCUMENT_STORE_PATH=./data/documents
 EMBEDDINGS_CACHE_PATH=./data/embeddings
+```
 
-# Server Configuration
+### Server Configuration
+```
 HOST=0.0.0.0
 PORT=8000
 DEBUG=True
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=INFO
 LOG_FILE=./logs/rag.log
+```
 
-# Rate Limiting
+### Rate Limiting
+```
 RATE_LIMIT_PER_MINUTE=60
 Streamlit Interface (.env)
+```
 env
-# API URLs
+### API URLs
+```
 RAG_API_URL=http://localhost:8000
 CHATBOT_API_URL=http://localhost:5000
+```
 
-# MongoDB
+### MongoDB
+```
 MONGO_URI=mongodb://localhost:27017/streamlit_db
 MONGO_DB_NAME=streamlit_db
+```
 
-# Authentication (optional)
+### Authentication (optional)
+```
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD_HASH=your_hashed_password
+```
 
-# Session
+### Session
+```
 SESSION_TIMEOUT=3600  # seconds
+```
 
-# Analytics
+### Analytics
+```
 ENABLE_ANALYTICS=True
 ANALYTICS_REFRESH_INTERVAL=60  # seconds
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=INFO
 Chatbot Backend (.env)
+```
 env
-# Server Configuration
+### Server Configuration
+```
 PORT=5000
 NODE_ENV=development
+```
 
-# WhatsApp Business API
+### WhatsApp Business API
+```
 WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
 WHATSAPP_ACCESS_TOKEN=your_whatsapp_access_token
 WHATSAPP_VERIFY_TOKEN=your_verify_token
 WHATSAPP_API_VERSION=v18.0
+```
 
-# MongoDB
+### MongoDB
+```
 MONGO_URI=mongodb://localhost:27017/chatbot_db
 MONGO_DB_NAME=chatbot_db
+```
 
-# RAG Integration
+### RAG Integration
+```
 RAG_API_URL=http://localhost:8000
+```
 
-# Security
+### Security
+```
 JWT_SECRET=your_jwt_secret_key
 SESSION_SECRET=your_session_secret
+```
 
-# Rate Limiting
+### Rate Limiting
+```
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX_REQUESTS=100
+```
 
-# Logging
+### Logging
+```
 LOG_LEVEL=info
 LOG_FILE=./logs/chatbot.log
+```
 
-# Webhook
+### Webhook
+```
 WEBHOOK_BASE_URL=https://your-domain.com
 WEBHOOK_PATH=/webhook
 Chatbot Frontend (.env)
+```
 env
-# API URLs
+### API URLs
+```
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_RAG_API_URL=http://localhost:8000
+```
 
-# Authentication
+### Authentication
+```
 REACT_APP_AUTH_ENABLED=true
+```
 
-# Feature Flags
+### Feature Flags
+```
 REACT_APP_ENABLE_ANALYTICS=true
 REACT_APP_ENABLE_NOTIFICATIONS=true
+```
 
-# Build
+### Build
 REACT_APP_BUILD_VERSION=1.0.0
 Running the System
 Development Mode
@@ -530,20 +559,21 @@ volumes:
 Testing
 Python Tests (RAG & Streamlit)
 bash
-# RAG backend
+
+### RAG backend
 cd rag-backend/RAG-main
 pytest tests/ --cov=app --cov-report=html
 
-# Streamlit
+### Streamlit
 cd streamlit-interface
 pytest tests/
 Node.js Tests (Chatbot)
 bash
-# Backend
+### Backend
 cd chatbot/yamurai-chatbot
 npm test -- --coverage
 
-# Frontend
+### Frontend
 cd chatbot/chatbot-frontend
 npm test
 End-to-End Testing (Cypress)
