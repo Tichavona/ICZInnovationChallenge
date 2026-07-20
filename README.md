@@ -726,34 +726,33 @@ We welcome contributions! Please follow these guidelines.
 - Security: Never commit .env or other sensitive data.
 ---
 
-License
-This project is proprietary and confidential. All rights reserved.
+## License
+This project is proprietary and confidential. All rights reserved. Copyright © 2026 Decision Edge Consulting (Private) Limited Team.
+Unauthorised copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without prior written permission from the authors. For licensing inquiries, please contact: sales@decisionedge.co
 
-Copyright © 2026 Muyamuri/Umsizi Team
+## Acknowledgements
+- POTRAZ – Postal and Telecommunications Regulatory Authority of Zimbabwe
+- National Innovation Acceleration Centre – Programme support
+- AI4I Challenge 2026 – Platform for innovation and impact
 
-Unauthorized copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without prior written permission from the authors.
+---
 
-For licensing inquiries, please contact: [sales@decisionedge.co]
+## Contact
+| Role	| Contact |
+|---|---|
+|Project Lead	| tvakisai@decisionedge.co.zw |
+|Technical Support | info@decisionedge.co |
 
-Acknowledgements
-POTRAZ – Postal and Telecommunications Regulatory Authority of Zimbabwe
-
-National Innovation Acceleration Centre – Programme support
-
-AI4I Challenge 2026 – Platform for innovation and impact
-
-Contact
-Role	Contact
-Project Lead	[tvakisai@decisionedge.co.zw]
-Technical Support	[info@decisionedge.co]
-Documentation Index
-Document	Location
-API Documentation	./docs/API.md
-Database Schema	./docs/DATABASE.md
-Deployment Guide	./docs/DEPLOYMENT.md
-User Manual	./docs/USER_MANUAL.md
-Contributing Guide	./CONTRIBUTING.md
-Security Policy	./SECURITY.md
-Changelog	./CHANGELOG.md
-Built with ❤️ in Zimbabwe
-Nyika inovakwa nevene vayo
+---
+## Documentation Index
+| Document	| Location |
+|---|---|
+| API Documentation |	./docs/API.md |
+| Database Schema	| ./docs/DATABASE.md |
+| Deployment Guide	| ./docs/DEPLOYMENT.md |
+| User Manual	| ./docs/USER_MANUAL.md |
+| Contributing Guide	| ./CONTRIBUTING.md |
+| Security Policy	| ./SECURITY.md |
+| Changelog	| ./CHANGELOG.md |
+---
+Built with ❤️ in Zimbabwe, "Nyika inovakwa nevene vayo"
