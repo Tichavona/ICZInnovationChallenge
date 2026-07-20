@@ -479,12 +479,14 @@ REACT_APP_AUTH_ENABLED=true
 REACT_APP_ENABLE_ANALYTICS=true
 REACT_APP_ENABLE_NOTIFICATIONS=true
 ```
---- 
-
-## Build
+#### Build
+```
 REACT_APP_BUILD_VERSION=1.0.0
-Running the System
-Development Mode
+```
+---
+
+## Running the System
+### Development Mode
 Start the services in the following order:
 
 Step	Service	Command	Port	URL
@@ -492,14 +494,17 @@ Step	Service	Command	Port	URL
 2	Streamlit Dashboard	streamlit run app.py	8501	http://localhost:8501
 3	Chatbot Backend	npm run dev	5000	http://localhost:5000
 4	Chatbot Frontend	npm start	3000	http://localhost:3000
-Using Docker Compose (Production)
+
+### Using Docker Compose (Production)
 Create a docker-compose.yml in the root directory (sample below) and run:
 
 bash
+```
 docker-compose up -d
 Sample docker-compose.yml
-
+```
 yaml
+```
 version: '3.8'
 
 services:
@@ -564,161 +569,162 @@ services:
 volumes:
   mongodb_data:
   rag_data:
-Testing
-Python Tests (RAG & Streamlit)
+```
+---
+
+## Testing
+
+### Python Tests (RAG & Streamlit)
+
 bash
 
-### RAG backend
+#### RAG backend
+```
 cd rag-backend/RAG-main
 pytest tests/ --cov=app --cov-report=html
+```
 
-### Streamlit
+#### Streamlit
+```
 cd streamlit-interface
 pytest tests/
-Node.js Tests (Chatbot)
+```
+
+### Node.js Tests (Chatbot)
 bash
-### Backend
+#### Backend
+
+```
 cd chatbot/yamurai-chatbot
 npm test -- --coverage
+```
 
-### Frontend
+#### Frontend
+```
 cd chatbot/chatbot-frontend
 npm test
-End-to-End Testing (Cypress)
+```
+
+### End-to-End Testing (Cypress)
 bash
+```
 npm install -g cypress
 cypress run
-Deployment
-Production Checklist
+```
+
+---
+## Deployment
+### Production Checklist
+```
 Set NODE_ENV=production in Node.js services
-
 Set DEBUG=False in Python services
-
 Use a production MongoDB (Atlas or dedicated server)
-
 Configure SSL/TLS certificates for HTTPS
-
 Set up a reverse proxy (nginx) in front of services
-
 Implement monitoring (Prometheus, Grafana)
-
 Schedule regular backups
-
 Configure centralised logging (ELK Stack)
-
 Set up rate limiting and DDoS protection
-
 Configure firewall and security groups
-
 Implement CI/CD pipeline
+```
 
-Cloud Deployment Options
+### Cloud Deployment Options
+```
 Provider	Services
 AWS	ECS or EC2 with RDS for MongoDB, SageMaker for LLM, S3 for storage
 Azure	Azure Container Instances, Cosmos DB, Azure OpenAI
 GCP	Cloud Run, Firestore, Vertex AI
-Project Status
-✅ Completed Features
-Component	Status	Description
-WhatsApp Integration	✅ Complete	Bidirectional messaging with full media support (text, images, audio, video, location, documents)
-NLP Engine	✅ Complete	Intent classification, entity recognition, sentiment analysis
-LLM with RAG	✅ Complete	Custom fine‑tuned model on Zimbabwean government documents
-Multimodal Processing	✅ Complete	Support for text, image, audio, video, location, and documents
-Document Parsing	✅ Complete	PDF, Excel, Word, CSV with OCR capability
-Data Storage	✅ Complete	MongoDB with encryption‑ready columns and hashed phone numbers
-Emergency Reporting	✅ Complete	Collection, triage, and routing of emergency reports
-Municipal Services	✅ Complete	Infrastructure issue reporting with tracking
-Agricultural Support	✅ Complete	Crop disease, pest, animal invasion reporting
-Government Communication	✅ Complete	AI‑powered Q&A with document citations
-Data Scraping	✅ Complete	Zimpapers publications proof‑of‑concept
-Shona/Ndebele Processing	✅ Complete	Basic language detection and processing
-ZCHPC CCE Readiness	✅ Complete	Deployment architecture configured
-🚧 In Development
-Component	Status	Description
-Stakeholder Dashboards	🚧 In Progress	Emergency, municipal, agricultural, admin dashboards
-Spatial Analytics	🚧 In Progress	Geospatial clustering for disease/pest prevalence mapping
-Full Multilingual Support	🚧 In Progress	Complete Shona and Ndebele language models
-Indigenous Tree Dataset	📋 Planned	Field expeditions and community interviews
-Key Features
-1. Emergency Reporting Module
-Automated triage of emergencies (fire, medical, crime, accidents, disasters)
+```
 
-GPS location integration for rapid response
+---
 
-Priority‑based dispatch system
+## Project Status
+### ✅ Completed Features| Component | Status | Description |
+|-----------|--------|-------------|
+| WhatsApp Integration | ✅ Complete | Bidirectional messaging with full media support (text, images, audio, video, location, documents) |
+| NLP Engine | ✅ Complete | Intent classification, entity recognition, sentiment analysis |
+| LLM with RAG | ✅ Complete | Custom fine‑tuned model on Zimbabwean government documents |
+| Multimodal Processing | ✅ Complete | Support for text, image, audio, video, location, and documents |
+| Document Parsing | ✅ Complete | PDF, Excel, Word, CSV with OCR capability |
+| Data Storage | ✅ Complete | MongoDB with encryption‑ready columns and hashed phone numbers |
+| Emergency Reporting | ✅ Complete | Collection, triage, and routing of emergency reports |
+| Municipal Services | ✅ Complete | Infrastructure issue reporting with tracking |
+| Agricultural Support | ✅ Complete | Crop disease, pest, animal invasion reporting |
+| Government Communication | ✅ Complete | AI‑powered Q&A with document citations |
+| Data Scraping | ✅ Complete | Zimpapers publications proof‑of‑concept |
+| Shona/Ndebele Processing | ✅ Complete | Basic language detection and processing |
+| ZCHPC CCE Readiness | ✅ Complete | Deployment architecture configured |
 
-Real‑time status updates to citizens
+### 🚧 In Development
+| Component | Status | Description |
+|---|---|---|
+| Stakeholder Dashboards | 🚧 In Progress | Emergency, municipal, agricultural, admin dashboards |
+| Spatial Analytics | 🚧 In Progress | Geospatial clustering for disease/pest prevalence mapping |
+| Full Multilingual Support | 🚧 In Progress | Complete Shona and Ndebele language models |
+| Indigenous Tree Dataset | 📋 Planned | Field expeditions and community interviews |
 
-2. Municipal Services Module
-Image and location‑based issue reporting (potholes, waste, water systems)
+---
+## Key Features
+### 1. Emergency Reporting Module
+- Automated triage of emergencies (fire, medical, crime, accidents, disasters)
+- GPS location integration for rapid response
+- Priority‑based dispatch system
+- Real‑time status updates to citizens
 
-Automated routing to relevant departments
+### 2. Municipal Services Module
+- Image and location‑based issue reporting (potholes, waste, water systems)
+- Automated routing to relevant departments
+- Citizen feedback and satisfaction tracking
+- Performance analytics for municipal authorities
 
-Citizen feedback and satisfaction tracking
+### 3. Agricultural Support Module
+- AI‑assisted crop disease diagnosis via image analysis
+- Pest control and crop protection advice
+- Animal invasion reporting to National Parks
+- Spatial analytics for disease/pest prevalence and invasion hotspots
+- Agricultural best practices and market information
 
-Performance analytics for municipal authorities
+### 4. Government Communication Module
+- Intelligent Q&A System with LLM‑powered responses
+- Document Reference Engine with automatic page‑level citations
+- Policy Update Broadcast for new regulations and announcements
+- Multilingual Support (English, Shona, Ndebele)
+- Source Verification with document references
 
-3. Agricultural Support Module
-AI‑assisted crop disease diagnosis via image analysis
+### 5. Data Sovereignty (Project Zvipo)
+- Public Data Aggregation and Harmonisation
+- Indigenous Tree Knowledge Dataset
+- Shona and Ndebele Language Corpora
+- Sovereign Data Platform with API endpoints
 
-Pest control and crop protection advice
+---
+## Development Roadmap
 
-Animal invasion reporting to National Parks
+### Phase	Timeline	Deliverables
+- Phase 1: Core Platform	Months 1‑3	Emergency reporting, government communication, WhatsApp integration
+- Phase 2: Full Integration	Months 4‑6	Municipal services, agricultural support, spatial analytics
+- Phase 3: National Scale‑up	Months 7‑12	National rollout, multilingual support, advanced analytics
+- Phase 4: Advanced Features	Months 13‑18	Mobile app, blockchain integration, predictive analytics
+---
 
-Spatial analytics for disease/pest prevalence and invasion hotspots
-
-Agricultural best practices and market information
-
-4. Government Communication Module
-Intelligent Q&A System with LLM‑powered responses
-
-Document Reference Engine with automatic page‑level citations
-
-Policy Update Broadcast for new regulations and announcements
-
-Multilingual Support (English, Shona, Ndebele)
-
-Source Verification with document references
-
-5. Data Sovereignty (Project Zvipo)
-Public Data Aggregation and Harmonisation
-
-Indigenous Tree Knowledge Dataset
-
-Shona and Ndebele Language Corpora
-
-Sovereign Data Platform with API endpoints
-
-Development Roadmap
-Phase	Timeline	Deliverables
-Phase 1: Core Platform	Months 1‑3	Emergency reporting, government communication, WhatsApp integration
-Phase 2: Full Integration	Months 4‑6	Municipal services, agricultural support, spatial analytics
-Phase 3: National Scale‑up	Months 7‑12	National rollout, multilingual support, advanced analytics
-Phase 4: Advanced Features	Months 13‑18	Mobile app, blockchain integration, predictive analytics
-Contributing
+## Contributing
 We welcome contributions! Please follow these guidelines.
 
-How to Contribute
-Fork the repository.
+### How to Contribute
+- Fork the repository.
+- Create a feature branch: git checkout -b feature/your-feature
+- Commit your changes: git commit -m "Add: your feature"
+- Push to the branch: git push origin feature/your-feature
+- Open a Pull Request.
 
-Create a feature branch: git checkout -b feature/your-feature
-
-Commit your changes: git commit -m "Add: your feature"
-
-Push to the branch: git push origin feature/your-feature
-
-Open a Pull Request.
-
-Development Standards
-Python: Follow PEP 8.
-
-JavaScript/TypeScript: Follow Airbnb style guide.
-
-Documentation: Update README and comments accordingly.
-
-Testing: Ensure all tests pass.
-
-Security: Never commit .env or other sensitive data.
+### Development Standards
+- Python: Follow PEP 8.
+- JavaScript/TypeScript: Follow Airbnb style guide.
+- Documentation: Update README and comments accordingly.
+- Testing: Ensure all tests pass.
+- Security: Never commit .env or other sensitive data.
+---
 
 License
 This project is proprietary and confidential. All rights reserved.
