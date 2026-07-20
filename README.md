@@ -640,8 +640,10 @@ GCP	Cloud Run, Firestore, Vertex AI
 ---
 
 ## Project Status
-### ✅ Completed Features| Component | Status | Description |
-|-----------|--------|-------------|
+### ✅ Completed Features
+
+| Component | Status | Description |
+|---|---|---|
 | WhatsApp Integration | ✅ Complete | Bidirectional messaging with full media support (text, images, audio, video, location, documents) |
 | NLP Engine | ✅ Complete | Intent classification, entity recognition, sentiment analysis |
 | LLM with RAG | ✅ Complete | Custom fine‑tuned model on Zimbabwean government documents |
