@@ -135,7 +135,7 @@ git clone https://github.com/Tichavona/AI4I.git
 cd AI4I
 ```
 
-2. Backend (RAG Backend)
+### 2. Backend (RAG Backend)
 Navigate to the RAG backend:
 
 ```bash
@@ -144,13 +144,13 @@ Create and activate a virtual environment (Python 3.10.13):
 ```
 
 bash
-### Windows
+#### Windows
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```
 python3.10 -m venv venv
 source venv/bin/activate
@@ -166,12 +166,12 @@ pip install -r requirements.txt
 Copy environment template:
 
 bash
-### Windows
+#### Windows
 ```
 copy .env.example .env
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```
 cp .env.example .env
 Configure .env (see Environment Variables).
@@ -191,7 +191,7 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 The RAG server will run at http://localhost:8000.
 ```
 
-3. Streamlit Interface
+### 3. Streamlit Interface
 Navigate to the Streamlit directory:
 
 bash
@@ -201,13 +201,13 @@ Create and activate a virtual environment (Python 3.10.13):
 ```
 
 bash
-### Windows
+#### Windows
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```
 python3.10 -m venv venv
 source venv/bin/activate
@@ -221,12 +221,12 @@ Copy environment template:
 ```
 
 bash
-### Windows
+#### Windows
 ```
 copy .env.example .env
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```cp .env.example .env
 Configure .env (see Environment Variables).
 ```
@@ -239,7 +239,7 @@ streamlit run app.py
 ```
 The dashboard will be available at http://localhost:8501.
 
-4. Chatbot Frontend (React)
+### 4. Chatbot Frontend (React)
 Navigate to the React frontend:
 
 bash
@@ -255,12 +255,12 @@ npm install
 Copy environment template:
 
 bash
-### Windows
+#### Windows
 ```
 copy .env.example .env
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```
 cp .env.example .env
 ```
@@ -280,7 +280,7 @@ bash
 ```
 npm run build
 ```
-5. Chatbot Backend (Node.js)
+### 5. Chatbot Backend (Node.js)
 Navigate to the chatbot backend:
 
 bash
@@ -296,12 +296,12 @@ npm install
 Copy environment template:
 
 bash
-### Windows
+#### Windows
 ```
 copy .env.example .env
 ```
 
-### Linux/Mac
+#### Linux/Mac
 ```
 cp .env.example .env
 ```
