@@ -83,7 +83,10 @@ The system cannot be deployed at this moment in time due to the following;
 ## System Architecture
 
 <img width="1672" height="941" alt="System Architecture" src="https://github.com/user-attachments/assets/a28c757a-71c4-4939-9feb-53178822c418" />
-                                                                                                                               
+
+---
+<img width="941" height="1672" alt="Backend Architecture" src="https://github.com/user-attachments/assets/52e3fe71-9b82-43d0-b387-82775e9c711d" />
+
 ---
 
 # Data Flow Summary
