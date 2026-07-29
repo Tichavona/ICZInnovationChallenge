@@ -6,6 +6,13 @@
 System demonstration videos available on below URLs
 1. https://youtu.be/1oEpIL0g0W0
 2. https://youtu.be/fRJ5T6rEpj0
+
+The system cannot be deployed at this moment in time due to the following;
+
+1. Government consent and approval required before going live on an pilot test
+2. City councils and emergency responders buy in required also
+3. Facebook does not allow exposition of chatbot to public unless fully tested and only in production processes which are underway
+   
 ---
 
 ## Table of Contents
