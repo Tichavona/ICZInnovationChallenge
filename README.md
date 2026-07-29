@@ -3,6 +3,9 @@
 **AI for Impact Challenge 2026**  
 *Artificial Intelligence for Maximum Social Impact and E‑Government Communication*
 
+System demonstration videos available on below URLs
+1. https://youtu.be/1A4rkpRppcc
+2. https://youtu.be/fRJ5T6rEpj0
 ---
 
 ## Table of Contents
