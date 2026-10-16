@@ -22,7 +22,7 @@ Stated here rather than discovered later. The insurance module is **functionally
 
 - There are **no live users and no written premium**. Every figure in any demonstration is seeded data on a working system.
 - There is **no loss ratio and no back-test** of the rating model against real claims. The first thing we ask of a sponsoring insurer is 24 months of claims history under NDA.
-- **Insurer tenancy is not built.** Portal access is governed by seniority, not by insurer, so two competing insurers must not both be given portal accounts until it is. See [Known Gaps](#known-gaps).
+- **Insurer tenancy rails in placed but not wired.** Portal access is governed by seniority, not by insurer, so two competing insurers must not both be given portal accounts until it is. See [Known Gaps](#known-gaps).
 
 ---
 
