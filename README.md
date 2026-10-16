@@ -1,15 +1,15 @@
-# AI4I – Muyamuri / Umsizi Chatbot & Sovereign Data Platform
+# Chengeta/Londoloza – Muyamuri / Umsizi Chatbot Insurance Module & Sovereign Data Platform
 
-**AI for Impact Challenge 2026**  
-*Artificial Intelligence for Maximum Social Impact and E‑Government Communication*
+**ICZ Insurance Innovation Challenge 2026**  
+*Artificial Intelligence for Maximum Social Impact and Data Driven Insurance Risk Pricing*
 
 System demonstration videos available on below URLs
 1. https://youtu.be/mNvA0TfymUQ
 2. https://youtu.be/fRJ5T6rEpj0
 
-The system cannot be deployed at this moment in time due to the following;
+The system has been partially deployed at this moment in time due to the following;
 
-1. Government consent and approval required before going live on an pilot test
+1. Chatbot now public on following numbers +263 73 507 7638 | +263 719 93 0210 in preparation of pilot test.
 2. City councils and emergency responders buy in required also
 3. Facebook does not allow exposition of chatbot to public unless fully tested and only in production processes which are underway
    
@@ -66,16 +66,14 @@ The system cannot be deployed at this moment in time due to the following;
 
 ## Overview
 
-**Muyamuri/Umsizi** is an AI‑powered digital platform that revolutionises citizen‑government interaction across four critical domains: emergency response, municipal services, agricultural support, and official government communication. The platform leverages WhatsApp's ubiquitous presence, with over 12.83 million active internet subscriptions in Zimbabwe, to create a seamless, intelligent interface that receives citizen reports while proactively communicating official government positions with verifiable citations.
-
-**Project Zvipo** (meaning "gifts" in Shona) extends the vision to build Zimbabwe's sovereign data foundation through public data aggregation, indigenous knowledge preservation, and the creation of Shona and Ndebele language corpora. The project addresses the critical data sovereignty gap by establishing a Sovereign Data Curation Pipeline that systematically scrapes and structures public government data while creating a first‑of‑its‑kind indigenous tree knowledge dataset.
+**Chengeta/Londoloza** is an AI‑powered digital platform that revolutionises insurance distribution, pricing and claims built on a national service platform that already reaches the people insurers cannot. The platform leverages WhatsApp's ubiquitous presence, with over 12.83 million active internet subscriptions in Zimbabwe, to create a seamless, intelligent interface that receives citizen reports while proactively giving aopportunity to access insurance services over familiar interface and application in addition to civic services they already enjoy.
 
 ### This repository consolidates three main components:
 
 | **Component** | **Technology** | **Purpose** |
 |---|---|---|
 | **RAG Backend** | Python 3.10.13, FastAPI, LLM | Document retrieval, embeddings, and LLM inference with Retrieval-Augmented Generation |
-| **Streamlit Interface** | Python 3.10.13, Streamlit | Web dashboard for government officials to monitor and update reports |
+| **Portal** | Node.js v24.18.0, TypeScript, JavaScript | Web dashboard for Insurer officials to monitor and update reports, claims, and customer onboarding |
 | **Chatbot** | Node.js v24.18.0, React, Express | WhatsApp integration, frontend admin UI, and backend API services |
 
 ---
