@@ -12,8 +12,6 @@
 | 🐛 | Issue (bug / defect) |
 | ✨ | Feature / Enhancement |
 
-> **Note on chronology & clustering:** Sections follow the original list's chronological order. Related items are clustered; items that appear later but belong to an earlier theme are noted. Duplicates have been consolidated (see §14). Issues are isolated in §12 and summarised in §13.
-
 ---
 
 ## 1. Core Platform, Security & Routing
@@ -59,8 +57,6 @@
 | 102 | Fix mobile needs: walk structured steps at `info_requested` | 🐛 Fix | ✅ Resolved |
 | 103 | Fix `Unsupported FormDataPart` upload error | 🐛 Issue | ✅ Resolved |
 
-> **Note:** #102 and #103 are late additions to this theme. #103 fixes the `FormDataPart` upload defect and is the likely root cause of the still-open mobile media upload issue (#25) — see §12, I2 and I18.
-
 ---
 
 ## 4. RBAC, WhatsApp & Mobile Follow-ups
@@ -73,8 +69,6 @@
 | 26 | WhatsApp report retrieval, grouping, and `departments=0` fix | 🐛 Fix / ✨ Feature | ✅ Resolved |
 | 27 | Mobile: persistent verification, account gating, service landing page | ✨ Feature | ❌ Not Started |
 | 104 | Fix WhatsApp: image reply after "My Applications" falls to emergency matcher | 🐛 Issue | ✅ Resolved |
-
-> **Note:** #25 and #27 continue the mobile thread from §3. #104 is a WhatsApp intent-routing fix in the same family as the #26 retrieval fix.
 
 ---
 
@@ -101,27 +95,7 @@
 
 ---
 
-## 6. Documentation, Proposals & Deliverables
-
-| # | Change | Type | Status |
-|---|--------|------|--------|
-| 43 | Write the updated BRD/TRD document | ✨ Docs | ✅ Done |
-| 44 | Build the pitch deck | ✨ Docs | ✅ Done |
-| 45 | Diagnose and fix `/removeDB` chunk deletion | 🐛 Issue | ✅ Resolved |
-| 46 | Build BRD as a standalone PDF | ✨ Docs | ✅ Done |
-| 47 | Build TRD as a standalone PDF | ✨ Docs | ✅ Done |
-| 48 | Fix `docs.filter` crash in `KnowledgeAdminPanel` | 🐛 Issue | ✅ Resolved |
-| 49 | Add original SVG artwork across the deck | ✨ Enhancement | ✅ Done |
-| 63 | Encryption posture doc and verification | ✨ Docs | ✅ Done |
-| 77 | Extract verified facts from both proposals | ✨ Task | ❌ Not Started |
-| 78 | Audit the codebase for what is actually built | ✨ Task | ❌ Not Started |
-| 79 | Build the 15-slide deck as `.pptx` and PDF | ✨ Deliverable | ❌ Not Started |
-| 98 | Write the BRD and TRD as two separate PDFs | ✨ Docs | ✅ Done |
-| 99 | Changelog, outstanding issues, and the demo runbook | ✨ Docs | ✅ Done |
-
----
-
-## 7. Maps, Road Safety & Roadside
+## 6. Maps, Road Safety & Roadside
 
 | # | Change | Type | Status |
 |---|--------|------|--------|
@@ -133,7 +107,7 @@
 
 ---
 
-## 8. ASM (Artisanal & Small-scale Mining) Backend
+## 7. ASM (Artisanal & Small-scale Mining) Backend
 
 | # | Change | Type | Status |
 |---|--------|------|--------|
@@ -143,7 +117,7 @@
 
 ---
 
-## 9. Polls
+## 8. Polls
 
 | # | Change | Type | Status |
 |---|--------|------|--------|
@@ -161,11 +135,9 @@
 | 75 | Verify the unshipped poll set compiles coherently | ✨ Verification | ✅ Done |
 | 76 | Add NEXT and CLEAR to the WhatsApp poll | ✨ Enhancement | ✅ Done |
 
-> **Note:** #74 is a stale duplicate of #71 (which is Done). No further action required.
-
 ---
 
-## 10. Mining Feature
+## 9. Mining Feature
 
 | # | Change | Type | Status |
 |---|--------|------|--------|
@@ -177,7 +149,7 @@
 
 ---
 
-## 11. Insurance Module
+## 10. Insurance Module
 
 | # | Change | Type | Status |
 |---|--------|------|--------|
@@ -197,14 +169,9 @@
 | 101 | Motor comprehensive: main driver details and licence front/back | ✨ Feature | ❌ Not Started *(status changed from In Progress)* |
 | 105 | Build insurance analytics and reporting page | ✨ Feature | ⚠️ Status unspecified |
 
-> **Notes:**
-> - #80 and #81 (original) were duplicates; merged into a single entry above. #86–#93 were interspersed with roadside and mining items in the original list.
-> - **#101 status change:** previously recorded as In Progress; now reported as Not Started. Confirm which is authoritative — the dependencies (#100 flow inversion, #87 tenancy) suggest it is still blocked.
-> - **#105:** no status supplied. Placed here pending confirmation; if it is complete, it should be marked ✅ Done and added to the analytics/reporting theme alongside #33 and #72.
-
 ---
 
-## 12. Issues Tracker (Isolated)
+## 11. Issues Tracker (Isolated)
 
 All bugs, defects and regressions pulled out of the clusters above.
 
@@ -235,7 +202,7 @@ All bugs, defects and regressions pulled out of the clusters above.
 
 ---
 
-## 13. Status Dashboard
+## 12. Status Dashboard
 
 | Status | Count | Items |
 |--------|-------|-------|
@@ -262,7 +229,7 @@ All bugs, defects and regressions pulled out of the clusters above.
 
 ---
 
-## 14. Deduplication & Clustering Notes
+## 13. Deduplication & Clustering Notes
 
 | Original | Action | Rationale |
 |----------|--------|-----------|
