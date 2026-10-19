@@ -5,7 +5,7 @@
 
 System demonstration videos:
 
-1. https://youtu.be/Ry8C4jFplIk
+1. https://www.youtube.com/watch?v=Ry8C4jFplIk
 2. https://youtu.be/mNvA0TfymUQ
 
 ### Deployment status at time of submission
